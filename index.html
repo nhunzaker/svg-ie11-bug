@@ -5,10 +5,16 @@
 <title>SVG Bug</title>
 </head>
 <body>
-<a href="http://google.com">
-<svg width="200" height="200">
+<svg style="display: none" width="200" height="200">
+  <symbol id="test">
   <text x="50" y="30" fontSize="24">Click Me!</text>
   <rect x="50" y="50" fill="red" width="100" height="100"></rect>
+  </symbol
+</svg>
+
+<a href="http://google.com">
+<svg width="200" height="200">
+<use xlink:href="#test"></use>
 </svg>
 </a>
 <!-- Google Tag Manager -->
