@@ -10,24 +10,36 @@
       <rect x="50" y="50" fill="red" width="100" height="100"></rect>
     </symbol>
   </svg>
+    
+    
+  <h3>Test case one:</h3>
+  <p><a href="http://google.com">This is a standard link</a></p>
 
+  ---
+
+  <h3>Test case two:</h3>
+  <p>SVG with a link as a parent, using a use tag to reference another SVG.</p>
   <a href="http://google.com">
-    <svg width="300" height="200">
-      <text x="50" y="30" fontSize="24">This shape uses a use tag</text>
+    <svg width="200" height="200">
       <use xlink:href="#test"></use>
     </svg>
   </a>
-  
+
+  ---
+
+  <h3>Test case three:</h3>
+  <p>SVG with a link as a parent, no use tag.</p>
   <a href="http://google.com">
-    <svg width="300" height="200">
-      <text x="50" y="30" fontSize="24">No use tag</text>
+    <svg width="200" height="200">
       <rect x="50" y="50" fill="red" width="100" height="100"></rect>
     </svg>
   </a>
   
+  ---
+  <h3>Test case four:</h3>
+  <p>SVG with a link as a parent, use tag is covered by an invisible rectangle.</p>
   <a href="http://google.com">
-    <svg width="300" height="200">
-      <text x="50" y="30" fontSize="24" width="150">Use tag with overlay rect</text>
+    <svg width="200" height="200">
       <use xlink:href="#test"></use>
       <rect x="0" y="0" fill="transparent" width="100%" height="100%"></rect>
     </svg>
